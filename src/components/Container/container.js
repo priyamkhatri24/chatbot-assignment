@@ -16,6 +16,7 @@ const container = (props) => {
         border: '1px solid #aaa', 
         width: '360px', 
         height: '92vh',
+        minHeight: "500px",
         top: '20px',
         borderRadius: '20px'
     }
