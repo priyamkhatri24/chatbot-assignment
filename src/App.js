@@ -109,18 +109,19 @@ const App = () => {
       {/* <h3 className={classes.name}>{questions}</h3>
       <h3>{isBrowserCompatible ? "True" : "False"}</h3> */}
       {viewer && (
-        // <embed
-        //   className={classes.embedClass}
-        //   src={url}
-        //   type="application/pdf"
-        // />
-        <object
+        <embed
           className={classes.embedClass}
-          data={url}
+          src={`https://drive.google.com/viewerng/
+          viewer?embedded=true&url=${url}`}
           type="application/pdf"
-        >
-          alt : <a href={url}>test.pdf</a>
-        </object>
+        />
+        // <object
+        //   className={classes.embedClass}
+        //   data={url}
+        //   type="application/pdf"
+        // >
+        //   alt : <a href={url}>test.pdf</a>
+        // </object>
 
         // <iframe
         //   id="pdf-js-viewer"
