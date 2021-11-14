@@ -94,7 +94,9 @@ const App = () => {
             onChange={(e) => setUrl(e.target.value)}
             value={url}
           />
-          <button onClick={() => setViewer(true)}>Open file object</button>
+          <button onClick={() => setViewer(true)}>
+            Open file embedded gdrive
+          </button>
         </>
       )}
       {/* <Container type="outer"> */}
