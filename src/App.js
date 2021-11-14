@@ -94,7 +94,7 @@ const App = () => {
             onChange={(e) => setUrl(e.target.value)}
             value={url}
           />
-          <button onClick={() => setViewer(true)}>Open file iframe</button>
+          <button onClick={() => setViewer(true)}>Open file object</button>
         </>
       )}
       {/* <Container type="outer"> */}
@@ -114,14 +114,22 @@ const App = () => {
         //   src={url}
         //   type="application/pdf"
         // />
-        <iframe
-          id="pdf-js-viewer"
-          src={url}
-          title="webviewer"
-          frameborder="0"
-          width="100%"
-          height="600"
-        ></iframe>
+        <object
+          className={classes.embedClass}
+          data={url}
+          type="application/pdf"
+        >
+          alt : <a href={url}>test.pdf</a>
+        </object>
+
+        // <iframe
+        //   id="pdf-js-viewer"
+        //   src={url}
+        //   title="webviewer"
+        //   frameborder="0"
+        //   width="100%"
+        //   height="600"
+        // ></iframe>
       )}
     </div>
   );
