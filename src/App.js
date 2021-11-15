@@ -34,6 +34,22 @@ const App = () => {
   //   const [questions, setQuestions] = useState("");
   //   const [isBrowserCompatible, setIsBrowserCompatible] = useState(true);
 
+  // useEffect(() => {
+  //   const script1 = document.createElement('script')
+  //   script1.src = './pdfjs/pdf.js'
+  //   const script2 = document.createElement('script')
+  //   script2.src = './pdfweb/viewer.js'
+  //   const link1 = document.createElement('link')
+  //   link1.rel = 'resource'
+  //   link1.type = 'application/l10n'
+  //   link1.href="locale/locale.properties"
+  //   const link2 = document.createElement('link')
+  //   link2.rel = 'stylesheet'
+  //   link2.href = './pdfweb/viewer.css'
+  //   document.head.appendChild(script1)
+  //   document.head.appendChild(script2)
+  // }, [])
+
   //   useEffect(() => {
   //     //   setQuestions([
   //     //     "Can I redeam my FB before the orignal term?",
@@ -99,6 +115,7 @@ const App = () => {
           </button>
         </>
       )}
+
       {/* <Container type="outer"> */}
       {/* <Header />
         <Robo /> */}
@@ -110,30 +127,30 @@ const App = () => {
       </Container> */}
       {/* <h3 className={classes.name}>{questions}</h3>
       <h3>{isBrowserCompatible ? "True" : "False"}</h3> */}
-      {viewer && (
+      {/* {viewer && (
         <embed
           className={classes.embedClass}
           src={`https://drive.google.com/viewerng/
-          viewer?embedded=true&url=${url}`}
+          viewer?embedded=true&url=http://example.com/the.pdf`}
           type="application/pdf"
-        />
-        // <object
-        //   className={classes.embedClass}
-        //   data={url}
-        //   type="application/pdf"
-        // >
-        //   alt : <a href={url}>test.pdf</a>
-        // </object>
+        /> */}
+      {/* <object
+          className={classes.embedClass}
+          data={url}
+          type="application/pdf"
+        >
+          alt : <a href={url}>test.pdf</a>
+        </object> */}
 
-        // <iframe
-        //   id="pdf-js-viewer"
-        //   src={url}
-        //   title="webviewer"
-        //   frameborder="0"
-        //   width="100%"
-        //   height="600"
-        // ></iframe>
-      )}
+      <iframe
+        id="pdf-js-viewer"
+        src={url}
+        title="webviewer"
+        frameborder="0"
+        width="100%"
+        height="600"
+      ></iframe>
+      {/* )} */}
     </div>
   );
 };
