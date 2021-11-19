@@ -72,7 +72,7 @@ const App = () => {
     WebViewer(
       {
         path: "./public",
-        licenseKey: "q1oxn6WyDRc572siUU5z",
+        licenseKey: "GvijE5XlpCs4ewd2fI2q",
         initialDoc:
           "https://ingenium-userfiles.s3.ap-south-1.amazonaws.com/Production/100.056932.020200925_070616.pdf",
       },
