@@ -27,3 +27,8 @@
     margin: 20px auto;
   }
 } */
+.myComponent {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}

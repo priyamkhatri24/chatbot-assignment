@@ -67,14 +67,21 @@ import Footer from "./components/Footer/Footer";
 // };
 const App = () => {
   const viewer = useRef(null);
-
+  const [rerender, setRerender] = useState(0);
+  const [url, setUrl] = useState(
+    "https://ingenium-userfiles.s3.ap-south-1.amazonaws.com/Production/100.056932.020200925_070616.pdf"
+  );
+  const [visible, setVisible] = useState(false);
   useEffect(() => {
     WebViewer(
       {
         path: "./public",
-        licenseKey: "GvijE5XlpCs4ewd2fI2q",
-        initialDoc:
-          "https://ingenium-userfiles.s3.ap-south-1.amazonaws.com/Production/100.056932.020200925_070616.pdf",
+        licenseKey: `${
+          process.env.NODE_ENV === "development"
+            ? "q1oxn6WyDRc572siUU5z"
+            : "GvijE5XlpCs4ewd2fI2q"
+        }`,
+        initialDoc: `${url}`,
       },
       viewer.current
     ).then((instance) => {
@@ -94,11 +101,14 @@ const App = () => {
         }
       );
     });
-  }, []);
+  }, [rerender]);
 
   return (
-    <div style={{ height: "100vh" }} className="MyComponent">
-      <div style={{ height: "100vh" }} className="webviewer" ref={viewer}></div>
+    <div style={{ height: "100vh" }}>
+      <p style={{ width: "90%" }}>File is : {url}</p>
+      <div style={{ height: "100vh" }} className="webviewer" ref={viewer}>
+        {" "}
+      </div>
     </div>
   );
 };
