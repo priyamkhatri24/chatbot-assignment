@@ -105,7 +105,7 @@ const App = () => {
 
   return (
     <div style={{ height: "100vh" }}>
-      <p style={{ width: "90%" }}>File is : {url}</p>
+      {/* <p style={{ width: "90%" }}>File is : {url}</p> */}
       <div style={{ height: "100vh" }} className="webviewer" ref={viewer}>
         {" "}
       </div>
